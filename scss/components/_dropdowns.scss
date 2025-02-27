@@ -1,0 +1,14 @@
+// scss/components/_dropdowns.scss
+.dropdown {
+    position: relative;
+    
+    &--btn { @include button-style($sapphire); }
+    &--menu {
+      position: absolute;
+      background-color: $white;
+      border: 1px solid $silver;
+      border-radius: $border-radius;
+      display: none;
+    }
+    &:hover &--menu { display: block; }
+  }

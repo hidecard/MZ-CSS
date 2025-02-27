@@ -1,0 +1,5 @@
+// scss/utilities/_spacing.scss
+@each $size in (1, 2, 3, 4, 5) {
+    .m-#{$size} { margin: $base-spacing * $size; }
+    .p-#{$size} { padding: $base-spacing * $size; }
+  }

@@ -1,0 +1,23 @@
+// scss/_variables.scss
+$thanakha: #f4d03f; // သနပ်ခါး
+$ruby: #c0392b;     // ပတ္တမြား
+$jade: #27ae60;     // ကျောက်စိမ်း
+$sapphire: #2980b9; // နီလာ
+$gold: #d4af37;     // ရွှေ
+$silver: #bdc3c7;   // ငွေ
+$black: #2c3e50;    // အနက်
+$white: #ecf0f1;    // အဖြူ
+$gray: #7f8c8d;     // မီးခိုးရောင်
+$purple: #8e44ad;   // ခရမ်းရောင်
+
+$base-spacing: 10px;
+$border-radius: 4px;
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$dark-mode: false; // Dark mode အတွက် toggle

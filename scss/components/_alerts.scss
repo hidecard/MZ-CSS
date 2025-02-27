@@ -1,0 +1,10 @@
+// scss/components/_alerts.scss
+.alert {
+    padding: $base-spacing;
+    border-radius: $border-radius;
+    margin-bottom: $base-spacing;
+    
+    &--success { background-color: $jade; color: $white; }
+    &--danger { background-color: $ruby; color: $white; }
+    &--info { background-color: $sapphire; color: $white; }
+  }

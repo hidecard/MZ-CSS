@@ -1,0 +1,12 @@
+// scss/base/_typography.scss
+body {
+    font-family: "Pyidaungsu", sans-serif;
+    color: if($dark-mode, $white, $black);
+    background-color: if($dark-mode, $black, $white);
+  }
+  
+  .heading {
+    font-size: 2rem;
+    margin-bottom: $base-spacing;
+    &--small { font-size: 1.5rem; }
+  }

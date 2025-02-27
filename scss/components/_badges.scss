@@ -1,0 +1,9 @@
+// scss/components/_badges.scss
+.badge {
+    padding: $base-spacing / 2 $base-spacing;
+    border-radius: $border-radius;
+    font-size: 0.9rem;
+    
+    &--ruby { background-color: $ruby; color: $white; }
+    &--jade { background-color: $jade; color: $white; }
+  }

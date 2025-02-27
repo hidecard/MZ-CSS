@@ -1,0 +1,9 @@
+// scss/components/_nav.scss
+.nav {
+    @include flex-center;
+    background-color: $ruby;
+    padding: $base-spacing;
+    
+    &--list { display: flex; gap: $base-spacing * 2; }
+    &--item a { color: $white; text-decoration: none; padding: $base-spacing / 2; }
+  }

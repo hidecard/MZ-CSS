@@ -1,0 +1,13 @@
+// scss/components/_forms.scss
+.field {
+    margin-bottom: $base-spacing * 2;
+    
+    label { display: block; color: $ruby; }
+    input, textarea, select {
+      width: 100%;
+      padding: $base-spacing;
+      border: 1px solid $jade;
+      border-radius: $border-radius;
+      background-color: lighten($thanakha, 20%);
+    }
+  }

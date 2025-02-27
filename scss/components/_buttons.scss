@@ -1,0 +1,10 @@
+// scss/components/_buttons.scss
+.btn {
+    @include button-style($ruby);
+    &:hover { background-color: darken($ruby, 10%); }
+    
+    &--thanakha { @include button-style($thanakha, $black); }
+    &--jade { @include button-style($jade); }
+    &--sapphire { @include button-style($sapphire); }
+    &--large { padding: $base-spacing * 1.5 $base-spacing * 3; }
+  }

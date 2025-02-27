@@ -1,0 +1,9 @@
+// scss/components/_tables.scss
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    th, td { padding: $base-spacing; border: 1px solid $silver; }
+    th { background-color: $thanakha; }
+    &--striped tr:nth-child(even) { background-color: lighten($gray, 20%); }
+  }

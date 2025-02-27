@@ -1,0 +1,7 @@
+// scss/components/_cards.scss
+.card {
+    background-color: if($dark-mode, $gray, $white);
+    border: 1px solid $jade;
+    padding: $base-spacing * 2;
+    border-radius: $border-radius;
+  }
