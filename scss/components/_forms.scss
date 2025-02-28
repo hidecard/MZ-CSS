@@ -1,23 +1,30 @@
 // scss/components/_forms.scss
+@use "sass:map"; // sass:map module ကို @use လုဪျတယ်
+@use "../variables" as var;
+
 .form {
-  &--group { margin-bottom: $base-spacing * 4; }
+  &--group { margin-bottom: var.$base-spacing * 4; }
   
-  &--label { display: block; margin-bottom: $base-spacing; color: map-get(map-get($colors, ruby), base); }
+  &--label { 
+    display: block; 
+    margin-bottom: var.$base-spacing; 
+    color: map.get(map.get(var.$colors, "ruby"), "base"); // map.get ကို ဆက်သုံးတယ်
+  }
   
   &--control {
     width: 100%;
-    padding: $base-spacing * 2;
-    border: 1px solid $silver;
-    border-radius: $border-radius;
-    background-color: if($dark-mode, $indigo, $white);
-    color: if($dark-mode, $white, $black);
-    &:focus { border-color: $ruby; outline: none; }
-    &.is--valid { border-color: $jade; }
-    &.is--invalid { border-color: $ruby; }
+    padding: var.$base-spacing * 2;
+    border: 1px solid var.$silver;
+    border-radius: var.$border-radius;
+    background-color: if(var.$dark-mode, var.$indigo, var.$white);
+    color: if(var.$dark-mode, var.$white, var.$black);
+    &:focus { border-color: var.$ruby; outline: none; }
+    &.is--valid { border-color: var.$jade; }
+    &.is--invalid { border-color: var.$ruby; }
   }
   
   &--check, &--radio {
-    margin-right: $base-spacing;
+    margin-right: var.$base-spacing;
   }
   
   &--group-input {

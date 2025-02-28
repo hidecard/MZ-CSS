@@ -1,16 +1,16 @@
 // scss/base/_typography.scss
 @use "sass:map";
-
+@use "../variables" as var; 
 body {
   font-family: "Pyidaungsu", sans-serif;
-  color: if($dark-mode, $white, $black);
-  background-color: if($dark-mode, $black, $white);
+  color: if(var.$dark-mode, var.$white, var.$black); 
+  background-color: if(var.$dark-mode, var.$black, var.$white);
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: $base-spacing * 2;
-  @each $level, $size in $font-sizes {
+  margin-bottom: var.$base-spacing * 2;
+  @each $level, $size in var.$font-sizes {
     h#{$level} { font-size: $size; }
   }
 }

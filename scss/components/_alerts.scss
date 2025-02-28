@@ -1,14 +1,31 @@
 // scss/components/_alerts.scss
+@use "sass:map";
+@use "sass:color"; // color.channel အတွက်
+@use "../variables" as var;
+@use "../mixins" as mix;
+
 .alert {
-  padding: $base-spacing * 2;
-  border-radius: $border-radius;
-  margin-bottom: $base-spacing * 2;
+  padding: var.$base-spacing * 2;
+  border-radius: var.$border-radius;
+  margin-bottom: var.$base-spacing * 2;
   
-  @each $name, $color in $colors {
-    &--#{$name} { background-color: map-get($color, base); color: if(lightness(map-get($color, base)) > 50, $black, $white); }
+  @each $name, $color in var.$colors {
+    &--#{$name} { 
+      background-color: map.get($color, "base"); 
+      color: if(color.channel(map.get($color, "base"), "lightness", $space: hsl) > 50%, var.$black, var.$white); // color.channel နဲ့ ပြောင်းတယ်
+    }
   }
   
-  &--dismissible { position: relative; padding-right: $base-spacing * 8; }
-  &--close { @include button-style($silver, $black); position: absolute; right: $base-spacing * 2; top: 50%; transform: translateY(-50%); }
+  &--dismissible { 
+    position: relative; 
+    padding-right: var.$base-spacing * 8; 
+  }
+  &--close { 
+    @include mix.button-style(var.$silver, var.$black); 
+    position: absolute; 
+    right: var.$base-spacing * 2; 
+    top: 50%; 
+    transform: translateY(-50%); 
+  }
   a { color: inherit; text-decoration: underline; }
 }

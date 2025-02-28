@@ -1,12 +1,29 @@
 // scss/components/_tables.scss
+@use "../variables" as var; // _variables.scss ကို @use လုဪျတယ်
+
 .table {
   width: 100%;
   border-collapse: collapse;
   
-  th, td { padding: $base-spacing * 2; border: 1px solid $silver; }
-  th { background-color: $thanakha; color: $black; }
-  &--striped tr:nth-child(even) { background-color: lighten($gray, 20%); }
-  &--hover tr:hover { background-color: $silver; }
-  &--sm { th, td { padding: $base-spacing; } }
-  &--responsive { display: block; overflow-x: auto; }
+  th, td { 
+    padding: var.$base-spacing * 2; // Namespace နဲ့ ခေါ်တယ်
+    border: 1px solid var.$silver; 
+  }
+  th { 
+    background-color: var.$thanakha; 
+    color: var.$black; 
+  }
+  &--striped tr:nth-child(even) { 
+    background-color: color.adjust(var.$gray, $lightness: 20%); 
+  }
+  &--hover tr:hover { 
+    background-color: var.$silver; 
+  }
+  &--sm { 
+    th, td { padding: var.$base-spacing; } 
+  }
+  &--responsive { 
+    display: block; 
+    overflow-x: auto; 
+  }
 }

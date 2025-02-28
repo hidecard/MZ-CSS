@@ -1,13 +1,15 @@
 // scss/components/_cards.scss
+@use "../variables" as var; // _variables.scss ကို @use လုဪျတယ်
+
 .card {
-  background-color: if($dark-mode, $indigo, $white);
-  border: 1px solid $silver;
-  border-radius: $border-radius;
+  background-color: if(var.$dark-mode, var.$indigo, var.$white); // Namespace နဲ့ ခေါ်တယ်
+  border: 1px solid var.$silver;
+  border-radius: var.$border-radius;
   
-  &--header { padding: $base-spacing * 2; border-bottom: 1px solid $silver; }
-  &--body { padding: $base-spacing * 2; }
-  &--footer { padding: $base-spacing * 2; border-top: 1px solid $silver; }
+  &--header { padding: var.$base-spacing * 2; border-bottom: 1px solid var.$silver; }
+  &--body { padding: var.$base-spacing * 2; }
+  &--footer { padding: var.$base-spacing * 2; border-top: 1px solid var.$silver; }
   
-  &--group, &--deck { display: flex; .card + .card { margin-left: $base-spacing * 2; } }
-  &--columns { column-count: 3; column-gap: $base-spacing * 4; }
+  &--group, &--deck { display: flex; .card + .card { margin-left: var.$base-spacing * 2; } }
+  &--columns { column-count: 3; column-gap: var.$base-spacing * 4; }
 }

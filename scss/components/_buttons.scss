@@ -1,21 +1,23 @@
 // scss/components/_buttons.scss
 @use "sass:map";
+@use "../mixins" as mix;
+@use "../variables" as var;
 
 .btn {
-  @include button-style(map-get(map-get($colors, "ruby"), base));
-  &:hover { background-color: map-get(map-get($colors, "ruby"), dark); }
+  @include mix.button-style(map.get(map.get(var.$colors, "ruby"), "base")); 
+  &:hover { background-color: map.get(map.get(var.$colors, "ruby"), "dark"); }
   &--disabled { opacity: 0.6; cursor: not-allowed; }
-  &--sm { padding: $base-spacing $base-spacing * 2; font-size: 0.875rem; }
-  &--lg { padding: $base-spacing * 3 $base-spacing * 6; font-size: 1.25rem; }
+  &--sm { padding: var.$base-spacing var.$base-spacing * 2; font-size: 0.875rem; }
+  &--lg { padding: var.$base-spacing * 3 var.$base-spacing * 6; font-size: 1.25rem; }
   
-  @each $name, $color in $colors {
+  @each $name, $color in var.$colors {
     &--#{$name} {
-      @include button-style(map-get($color, base));
-      &:hover { background-color: map-get($color, dark); }
+      @include mix.button-style(map.get($color, "base"));
+      &:hover { background-color: map.get($color, "dark"); }
     }
     &--outline-#{$name} {
-      @include button-style(map-get($color, base), map-get($color, base), true);
-      &:hover { background-color: map-get($color, light); }
+      @include mix.button-style(map.get($color, "base"), map.get($color, "base"), true);
+      &:hover { background-color: map.get($color, "light"); }
     }
   }
   

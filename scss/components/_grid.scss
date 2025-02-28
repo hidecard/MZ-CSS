@@ -1,24 +1,26 @@
 // scss/components/_grid.scss
 @use "sass:math";
+@use "../variables" as var;
+@use "../mixins" as mix;
 
 .container {
   width: 100%;
-  padding: 0 $base-spacing * 4;
+  padding: 0 var.$base-spacing * 4;
   margin: 0 auto;
   @each $size, $width in ("sm": 540px, "md": 720px, "lg": 960px, "xl": 1140px, "xxl": 1320px) {
-    @include breakpoint($size) { max-width: $width; }
+    @include mix.breakpoint($size) { max-width: $width; }
   }
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 (-$base-spacing * 2);
+  margin: 0 - var.$base-spacing * 2; // Space ထည့်ပြီး ပြင်တယ်
 }
 
 .col {
   flex: 1;
-  padding: 0 $base-spacing * 2;
+  padding: 0 var.$base-spacing * 2;
   
   @for $i from 1 through 12 {
     &--#{$i} { flex: 0 0 math.div($i, 12) * 100%; max-width: math.div($i, 12) * 100%; }
@@ -26,7 +28,7 @@
   }
   
   @each $size in ("sm", "md", "lg", "xl", "xxl") {
-    @include breakpoint($size) {
+    @include mix.breakpoint($size) {
       @for $i from 1 through 12 {
         &--#{$size}-#{$i} { flex: 0 0 math.div($i, 12) * 100%; max-width: math.div($i, 12) * 100%; }
         &--offset-#{$size}-#{$i} { margin-left: math.div($i, 12) * 100%; }
