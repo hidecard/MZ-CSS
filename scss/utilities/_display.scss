@@ -1,0 +1,11 @@
+// scss/utilities/_display.scss
+.d--none { display: none; }
+.d--block { display: block; }
+.d--inline { display: inline; }
+.d--flex { display: flex; }
+@each $size in (sm, md, lg, xl, xxl) {
+  @include breakpoint($size) {
+    .d--#{$size}-none { display: none; }
+    .d--#{$size}-block { display: block; }
+  }
+}

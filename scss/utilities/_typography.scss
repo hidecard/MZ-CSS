@@ -1,0 +1,9 @@
+// scss/utilities/_typography.scss
+@each $level, $size in $font-sizes {
+    .fs--#{$level} { font-size: $size; }
+  }
+  .text--center { text-align: center; }
+  .text--bold { font-weight: bold; }
+  .text--lead { font-size: 1.25rem; line-height: 1.4; }
+  .list--unstyled { list-style: none; }
+  .list--inline { display: flex; gap: $base-spacing * 2; }

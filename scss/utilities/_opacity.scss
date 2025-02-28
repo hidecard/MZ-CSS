@@ -1,0 +1,4 @@
+// scss/utilities/_opacity.scss
+@for $i from 0 through 10 {
+    .opacity--#{$i * 10} { opacity: $i / 10; }
+  }

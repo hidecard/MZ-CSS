@@ -1,5 +1,12 @@
 // scss/utilities/_spacing.scss
-@each $size in (1, 2, 3, 4, 5) {
-    .m-#{$size} { margin: $base-spacing * $size; }
-    .p-#{$size} { padding: $base-spacing * $size; }
+@each $prop in (m: margin, p: padding) {
+  @each $side in (t: top, r: right, b: bottom, l: left, x: (left right), y: (top bottom)) {
+    @for $i from 0 through 6 {
+      .#{map-get($prop, 0)}#{map-get($side, 0)}-#{$i} {
+        @each $s in map-get($side, 1) {
+          #{map-get($prop, 1)}-#{$s}: $base-spacing * $i;
+        }
+      }
+    }
   }
+}

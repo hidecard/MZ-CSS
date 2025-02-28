@@ -1,7 +1,8 @@
 // scss/utilities/_colors.scss
-.bg--thanakha { background-color: $thanakha; }
-.bg--ruby { background-color: $ruby; }
-.bg--jade { background-color: $jade; }
-.bg--sapphire { background-color: $sapphire; }
-.text--ruby { color: $ruby; }
-.text--jade { color: $jade; }
+@each $name, $color in $colors {
+    .bg--#{$name} { background-color: map-get($color, base); }
+    .bg--#{$name}-light { background-color: map-get($color, light); }
+    .bg--#{$name}-dark { background-color: map-get($color, dark); }
+    .text--#{$name} { color: map-get($color, base); }
+    .border--#{$name} { border-color: map-get($color, base); }
+  }

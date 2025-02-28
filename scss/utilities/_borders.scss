@@ -1,0 +1,5 @@
+// scss/utilities/_borders.scss
+.border { border: 1px solid $silver; }
+.border--0 { border: 0; }
+.border--rounded { border-radius: $border-radius; }
+.border--circle { border-radius: 50%; }

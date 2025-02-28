@@ -1,4 +1,9 @@
 // scss/utilities/_layout.scss
-.flex { @include flex-center; }
+.flex { display: flex; }
 .flex--row { flex-direction: row; }
 .flex--col { flex-direction: column; }
+.flex--wrap { flex-wrap: wrap; }
+.justify--between { justify-content: space-between; }
+.align--center { align-items: center; }
+.gap--1 { gap: $base-spacing; }
+.gap--2 { gap: $base-spacing * 2; }
