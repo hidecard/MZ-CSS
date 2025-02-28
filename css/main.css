@@ -1,10 +1,10 @@
-/* Error: There is no module with the namespace "color".
- *    ,
- * 18 |   "thanakha": (base: $thanakha, light: color.adjust($thanakha, $lightness: 20%), dark: color.adjust($thanakha, $lightness: -20%)),
- *    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   scss\_variables.scss 18:40  @use
- *   scss\main.scss 3:1          root stylesheet */
+/* Error: Undefined variable.
+ *   ,
+ * 6 |   color: if($dark-mode, $white, $black);
+ *   |             ^^^^^^^^^^
+ *   '
+ *   scss\base\_typography.scss 6:13  @use
+ *   scss\main.scss 6:1               root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: There is no module with the namespace "color".\a    \2577 \a 18 \2502    "thanakha": (base: $thanakha, light: color.adjust($thanakha, $lightness: 20%), dark: color.adjust($thanakha, $lightness: -20%)),\d\a    \2502                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\_variables.scss 18:40  @use\a   scss\\main.scss 3:1          root stylesheet';
+  content: "Error: Undefined variable.\a   \2577 \a 6 \2502    color: if($dark-mode, $white, $black);\d\a   \2502              ^^^^^^^^^^\a   \2575 \a   scss\\base\\_typography.scss 6:13  @use\a   scss\\main.scss 6:1               root stylesheet";
 }
