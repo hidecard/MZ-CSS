@@ -1,12 +1,12 @@
 // scss/components/_tables.scss
-@use "../variables" as var; // _variables.scss ကို @use လုဪျတယ်
+@use "../variables" as var; 
 
 .table {
   width: 100%;
   border-collapse: collapse;
   
   th, td { 
-    padding: var.$base-spacing * 2; // Namespace နဲ့ ခေါ်တယ်
+    padding: var.$base-spacing * 2; 
     border: 1px solid var.$silver; 
   }
   th { 

@@ -1,5 +1,5 @@
 // scss/components/_forms.scss
-@use "sass:map"; // sass:map module ကို @use လုဪျတယ်
+@use "sass:map";
 @use "../variables" as var;
 
 .form {
@@ -8,7 +8,7 @@
   &--label { 
     display: block; 
     margin-bottom: var.$base-spacing; 
-    color: map.get(map.get(var.$colors, "ruby"), "base"); // map.get ကို ဆက်သုံးတယ်
+    color: map.get(map.get(var.$colors, "ruby"), "base");
   }
   
   &--control {

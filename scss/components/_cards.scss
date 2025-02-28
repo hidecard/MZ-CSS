@@ -1,8 +1,8 @@
 // scss/components/_cards.scss
-@use "../variables" as var; // _variables.scss ကို @use လုဪျတယ်
+@use "../variables" as var; 
 
 .card {
-  background-color: if(var.$dark-mode, var.$indigo, var.$white); // Namespace နဲ့ ခေါ်တယ်
+  background-color: if(var.$dark-mode, var.$indigo, var.$white); 
   border: 1px solid var.$silver;
   border-radius: var.$border-radius;
   
