@@ -1,0 +1,7 @@
+// scss/components/_accordions.scss
+.accordion {
+    &--item { border: 1px solid $silver; margin-bottom: $base-spacing; }
+    &--header { padding: $base-spacing * 2; cursor: pointer; background-color: $thanakha; }
+    &--body { padding: $base-spacing * 2; display: none; &.active { display: block; } }
+    &--flush { border: 0; }
+  }

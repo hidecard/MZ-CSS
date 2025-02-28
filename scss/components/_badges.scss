@@ -1,9 +1,11 @@
 // scss/components/_badges.scss
 .badge {
-    padding: $base-spacing / 2 $base-spacing;
-    border-radius: $border-radius;
-    font-size: 0.9rem;
-    
-    &--ruby { background-color: $ruby; color: $white; }
-    &--jade { background-color: $jade; color: $white; }
+  padding: $base-spacing $base-spacing * 2;
+  border-radius: $border-radius;
+  font-size: 0.875rem;
+  
+  @each $name, $color in $colors {
+    &--#{$name} { background-color: map-get($color, base); color: if(lightness(map-get($color, base)) > 50, $black, $white); }
   }
+  &--pill { border-radius: 999px; }
+}

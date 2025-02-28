@@ -1,0 +1,10 @@
+// scss/components/_images.scss
+.img {
+    max-width: 100%;
+    height: auto;
+    
+    &--fluid { width: 100%; }
+    &--rounded { border-radius: $border-radius; }
+    &--circle { border-radius: 50%; }
+    &--thumbnail { border: 1px solid $silver; padding: $base-spacing; }
+  }

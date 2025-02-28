@@ -1,10 +1,14 @@
 // scss/components/_alerts.scss
 .alert {
-    padding: $base-spacing;
-    border-radius: $border-radius;
-    margin-bottom: $base-spacing;
-    
-    &--success { background-color: $jade; color: $white; }
-    &--danger { background-color: $ruby; color: $white; }
-    &--info { background-color: $sapphire; color: $white; }
+  padding: $base-spacing * 2;
+  border-radius: $border-radius;
+  margin-bottom: $base-spacing * 2;
+  
+  @each $name, $color in $colors {
+    &--#{$name} { background-color: map-get($color, base); color: if(lightness(map-get($color, base)) > 50, $black, $white); }
   }
+  
+  &--dismissible { position: relative; padding-right: $base-spacing * 8; }
+  &--close { @include button-style($silver, $black); position: absolute; right: $base-spacing * 2; top: 50%; transform: translateY(-50%); }
+  a { color: inherit; text-decoration: underline; }
+}

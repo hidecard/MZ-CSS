@@ -1,0 +1,13 @@
+// scss/components/_carousels.scss
+.carousel {
+    position: relative;
+    overflow: hidden;
+    
+    &--item { display: none; &.active { display: block; } }
+    &--control { position: absolute; top: 50%; transform: translateY(-50%); padding: $base-spacing * 2; }
+    &--prev { left: 0; }
+    &--next { right: 0; }
+    &--indicators { position: absolute; bottom: $base-spacing * 2; display: flex; gap: $base-spacing; }
+    &--indicator { width: $base-spacing * 2; height: $base-spacing * 2; background: $silver; border-radius: 50%; &.active { background: $ruby; } }
+    &--caption { position: absolute; bottom: 0; color: $white; padding: $base-spacing * 2; }
+  }

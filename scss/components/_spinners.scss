@@ -1,0 +1,24 @@
+// scss/components/_spinners.scss
+.spinner {
+    &--border {
+      width: $base-spacing * 8;
+      height: $base-spacing * 8;
+      border: $base-spacing solid $silver;
+      border-top-color: $ruby;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    &--grow {
+      width: $base-spacing * 8;
+      height: $base-spacing * 8;
+      background-color: $ruby;
+      border-radius: 50%;
+      animation: grow 1.5s infinite;
+    }
+    
+    @each $name, $color in $colors {
+      &--#{$name} { border-top-color: map-get($color, base); background-color: map-get($color, base); }
+    }
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes grow { 0%, 100% { transform: scale(0); } 50% { transform: scale(1); } }

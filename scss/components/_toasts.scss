@@ -1,0 +1,15 @@
+// scss/components/_toasts.scss
+.toast {
+    position: fixed;
+    top: $base-spacing * 2;
+    right: $base-spacing * 2;
+    background-color: if($dark-mode, $indigo, $white);
+    border: 1px solid $silver;
+    padding: $base-spacing * 2;
+    border-radius: $border-radius;
+    z-index: 1000;
+    
+    &--header { padding-bottom: $base-spacing; border-bottom: 1px solid $silver; }
+    &--body { padding-top: $base-spacing; }
+    &--close { @include button-style($silver, $black); float: right; }
+  }
