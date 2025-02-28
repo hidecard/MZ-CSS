@@ -1,4 +1,6 @@
 // scss/base/_typography.scss
+@use "sass:map";
+
 body {
   font-family: "Pyidaungsu", sans-serif;
   color: if($dark-mode, $white, $black);

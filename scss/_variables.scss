@@ -15,23 +15,23 @@ $pink: #e91e63;
 $orange: #f39c12;
 
 $colors: (
-  thanakha: (base: $thanakha, light: lighten($thanakha, 20%), dark: darken($thanakha, 20%)),
-  ruby: (base: $ruby, light: lighten($ruby, 20%), dark: darken($ruby, 20%)),
-  jade: (base: $jade, light: lighten($jade, 20%), dark: darken($jade, 20%)),
-  sapphire: (base: $sapphire, light: lighten($sapphire, 20%), dark: darken($sapphire, 20%)),
-  gold: (base: $gold, light: lighten($gold, 20%), dark: darken($gold, 20%)),
-  silver: (base: $silver, light: lighten($silver, 20%), dark: darken($silver, 20%)),
-  black: (base: $black, light: lighten($black, 20%), dark: darken($black, 20%)),
-  white: (base: $white, light: lighten($white, 5%), dark: darken($white, 20%)),
-  gray: (base: $gray, light: lighten($gray, 20%), dark: darken($gray, 20%)),
-  purple: (base: $purple, light: lighten($purple, 20%), dark: darken($purple, 20%)),
-  indigo: (base: $indigo, light: lighten($indigo, 20%), dark: darken($indigo, 20%)),
-  teal: (base: $teal, light: lighten($teal, 20%), dark: darken($teal, 20%)),
-  pink: (base: $pink, light: lighten($pink, 20%), dark: darken($pink, 20%)),
-  orange: (base: $orange, light: lighten($orange, 20%), dark: darken($orange, 20%))
+  "thanakha": (base: $thanakha, light: color.adjust($thanakha, $lightness: 20%), dark: color.adjust($thanakha, $lightness: -20%)),
+  "ruby": (base: $ruby, light: color.adjust($ruby, $lightness: 20%), dark: color.adjust($ruby, $lightness: -20%)),
+  "jade": (base: $jade, light: color.adjust($jade, $lightness: 20%), dark: color.adjust($jade, $lightness: -20%)),
+  "sapphire": (base: $sapphire, light: color.adjust($sapphire, $lightness: 20%), dark: color.adjust($sapphire, $lightness: -20%)),
+  "gold": (base: $gold, light: color.adjust($gold, $lightness: 20%), dark: color.adjust($gold, $lightness: -20%)),
+  "silver": (base: $silver, light: color.adjust($silver, $lightness: 20%), dark: color.adjust($silver, $lightness: -20%)),
+  "black": (base: $black, light: color.adjust($black, $lightness: 20%), dark: color.adjust($black, $lightness: -20%)),
+  "white": (base: $white, light: color.adjust($white, $lightness: 5%), dark: color.adjust($white, $lightness: -20%)),
+  "gray": (base: $gray, light: color.adjust($gray, $lightness: 20%), dark: color.adjust($gray, $lightness: -20%)),
+  "purple": (base: $purple, light: color.adjust($purple, $lightness: 20%), dark: color.adjust($purple, $lightness: -20%)),
+  "indigo": (base: $indigo, light: color.adjust($indigo, $lightness: 20%), dark: color.adjust($indigo, $lightness: -20%)),
+  "teal": (base: $teal, light: color.adjust($teal, $lightness: 20%), dark: color.adjust($teal, $lightness: -20%)),
+  "pink": (base: $pink, light: color.adjust($pink, $lightness: 20%), dark: color.adjust($pink, $lightness: -20%)),
+  "orange": (base: $orange, light: color.adjust($orange, $lightness: 20%), dark: color.adjust($orange, $lightness: -20%))
 );
 
-$base-spacing: 0.25rem; // 4px
+$base-spacing: 0.25rem;
 $border-radius: 0.25rem;
 $shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 $font-sizes: (
@@ -39,11 +39,11 @@ $font-sizes: (
 );
 
 $breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px
 );
 
 $dark-mode: false;

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/pyidaungsu@1.0.0/css/pyidaungsu.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar--sticky mb-2">
+      <a href="#" class="navbar--brand">MZ Framework</a>
+      <div class="navbar--nav navbar--collapse">
+        <a href="#" class="navbar--link">ပင်မစာမျက်နှာ</a>
+        <a href="#" class="navbar--link">ဆက်သွယ်ရန်</a>
+      </div>
+    </nav>
+
+    <div class="row mb-2">
+      <div class="col col--md-4">
+        <div class="card shadow">
+          <div class="card--header">ကတ် ၁</div>
+          <div class="card--body">
+            <img class="img img--fluid img--rounded" src="https://via.placeholder.com/150" alt="Placeholder">
+            <p>အကြောင်းအရာ</p>
+            <span class="badge badge--jade">New</span>
+          </div>
+        </div>
+      </div>
+      <div class="col col--md-4">
+        <div class="dropdown">
+          <button class="dropdown--toggle">Dropdown</button>
+          <div class="dropdown--menu">
+            <a href="#">Link 1</a>
+            <div class="divider"></div>
+            <a href="#">Link 2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form--group mb-2">
+      <label class="form--label" for="name">နာမည်</label>
+      <div class="form--group-input">
+        <input class="form--control" type="text" id="name" placeholder="နာမည်">
+        <button class="btn btn--jade">ရှာမည်</button>
+      </div>
+      <div class="form--file mt-1">
+        <input type="file" id="file">
+        <label for="file" class="btn btn--thanakha">ဖိုင်ရွေးပါ</label>
+      </div>
+    </div>
+
+    <div class="alert alert--success alert--dismissible mb-2">
+      အောင်မြင်ပါပြီ! <a href="#">ဆက်ကြည့်ရန်</a>
+      <button class="alert--close">X</button>
+    </div>
+
+    <table class="table table--striped table--hover table--responsive mb-2">
+      <thead><tr><th>အမည်</th><th>အလုပ်</th></tr></thead>
+      <tbody><tr><td>မောင်မောင်</td><td>ဆရာ</td></tr></tbody>
+    </table>
+
+    <div class="accordion mb-2">
+      <div class="accordion--item">
+        <div class="accordion--header">အပိုင်း ၁</div>
+        <div class="accordion--body active">အကြောင်းအရာ</div>
+      </div>
+    </div>
+
+    <div class="carousel mb-2">
+      <div class="carousel--item active">
+        <img class="img img--fluid" src="https://via.placeholder.com/300" alt="Slide 1">
+        <div class="carousel--caption">Slide 1</div>
+      </div>
+      <div class="carousel--indicators">
+        <span class="carousel--indicator active"></span>
+        <span class="carousel--indicator"></span>
+      </div>
+      <button class="carousel--control carousel--prev btn btn--thanakha">Prev</button>
+      <button class="carousel--control carousel--next btn btn--thanakha">Next</button>
+    </div>
+
+    <div class="progress mb-2">
+      <div class="progress--bar striped" style="width: 75%;"><span>75%</span></div>
+    </div>
+
+    <div class="spinner--border spinner--ruby mb-2"></div>
+    <div class="toast fade-in">
+      <div class="toast--header">သတိပေးချက်</div>
+      <div class="toast--body">အသစ်ရောက်ပါပြီ!</div>
+      <button class="toast--close">X</button>
+    </div>
+  </div>
+</body>
+</html>

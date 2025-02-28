@@ -1,4 +1,6 @@
 // scss/_mixins.scss
+@use "sass:math";
+
 @mixin breakpoint($size) {
   @if map-has-key($breakpoints, $size) {
     @media (min-width: map-get($breakpoints, $size)) {
