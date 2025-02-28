@@ -1,23 +1,49 @@
 // scss/_variables.scss
-$thanakha: #f4d03f; // သနပ်ခါး
-$ruby: #c0392b;     // ပတ္တမြား
-$jade: #27ae60;     // ကျောက်စိမ်း
-$sapphire: #2980b9; // နီလာ
-$gold: #d4af37;     // ရွှေ
-$silver: #bdc3c7;   // ငွေ
-$black: #2c3e50;    // အနက်
-$white: #ecf0f1;    // အဖြူ
-$gray: #7f8c8d;     // မီးခိုးရောင်
-$purple: #8e44ad;   // ခရမ်းရောင်
+$thanakha: #f4d03f;
+$ruby: #c0392b;
+$jade: #27ae60;
+$sapphire: #2980b9;
+$gold: #d4af37;
+$silver: #bdc3c7;
+$black: #2c3e50;
+$white: #ecf0f1;
+$gray: #7f8c8d;
+$purple: #8e44ad;
+$indigo: #34495e;
+$teal: #16a085;
+$pink: #e91e63;
+$orange: #f39c12;
 
-$base-spacing: 10px;
-$border-radius: 4px;
+$colors: (
+  thanakha: (base: $thanakha, light: lighten($thanakha, 20%), dark: darken($thanakha, 20%)),
+  ruby: (base: $ruby, light: lighten($ruby, 20%), dark: darken($ruby, 20%)),
+  jade: (base: $jade, light: lighten($jade, 20%), dark: darken($jade, 20%)),
+  sapphire: (base: $sapphire, light: lighten($sapphire, 20%), dark: darken($sapphire, 20%)),
+  gold: (base: $gold, light: lighten($gold, 20%), dark: darken($gold, 20%)),
+  silver: (base: $silver, light: lighten($silver, 20%), dark: darken($silver, 20%)),
+  black: (base: $black, light: lighten($black, 20%), dark: darken($black, 20%)),
+  white: (base: $white, light: lighten($white, 5%), dark: darken($white, 20%)),
+  gray: (base: $gray, light: lighten($gray, 20%), dark: darken($gray, 20%)),
+  purple: (base: $purple, light: lighten($purple, 20%), dark: darken($purple, 20%)),
+  indigo: (base: $indigo, light: lighten($indigo, 20%), dark: darken($indigo, 20%)),
+  teal: (base: $teal, light: lighten($teal, 20%), dark: darken($teal, 20%)),
+  pink: (base: $pink, light: lighten($pink, 20%), dark: darken($pink, 20%)),
+  orange: (base: $orange, light: lighten($orange, 20%), dark: darken($orange, 20%))
+);
+
+$base-spacing: 0.25rem; // 4px
+$border-radius: 0.25rem;
+$shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$font-sizes: (
+  1: 2.5rem, 2: 2rem, 3: 1.75rem, 4: 1.5rem, 5: 1.25rem, 6: 1rem
+);
 
 $breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1400px
 );
 
-$dark-mode: false; // Dark mode အတွက် toggle
+$dark-mode: false;
