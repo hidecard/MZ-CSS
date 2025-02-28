@@ -1,7 +1,13 @@
 // scss/components/_cards.scss
 .card {
-    background-color: if($dark-mode, $gray, $white);
-    border: 1px solid $jade;
-    padding: $base-spacing * 2;
-    border-radius: $border-radius;
-  }
+  background-color: if($dark-mode, $indigo, $white);
+  border: 1px solid $silver;
+  border-radius: $border-radius;
+  
+  &--header { padding: $base-spacing * 2; border-bottom: 1px solid $silver; }
+  &--body { padding: $base-spacing * 2; }
+  &--footer { padding: $base-spacing * 2; border-top: 1px solid $silver; }
+  
+  &--group, &--deck { display: flex; .card + .card { margin-left: $base-spacing * 2; } }
+  &--columns { column-count: 3; column-gap: $base-spacing * 4; }
+}

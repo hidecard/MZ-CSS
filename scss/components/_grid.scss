@@ -1,13 +1,34 @@
 // scss/components/_grid.scss
-.grid {
-  display: grid;
-  gap: $base-spacing;
+.container {
+  width: 100%;
+  padding: 0 $base-spacing * 4;
+  margin: 0 auto;
+  @each $size, $width in (sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1320px) {
+    @include breakpoint($size) { max-width: $width; }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-$base-spacing * 2);
+}
+
+.col {
+  flex: 1;
+  padding: 0 $base-spacing * 2;
   
-  &--2 { grid-template-columns: repeat(2, 1fr); }
-  &--3 { grid-template-columns: repeat(3, 1fr); }
-  &--4 { grid-template-columns: repeat(4, 1fr); }
+  @for $i from 1 through 12 {
+    &--#{$i} { flex: 0 0 percentage($i / 12); max-width: percentage($i / 12); }
+    &--offset-#{$i} { margin-left: percentage($i / 12); }
+  }
   
-  @include breakpoint(md) {
-    &--md-2 { grid-template-columns: repeat(2, 1fr); }
+  @each $size in (sm, md, lg, xl, xxl) {
+    @include breakpoint($size) {
+      @for $i from 1 through 12 {
+        &--#{$size}-#{$i} { flex: 0 0 percentage($i / 12); max-width: percentage($i / 12); }
+        &--offset-#{$size}-#{$i} { margin-left: percentage($i / 12); }
+      }
+    }
   }
 }

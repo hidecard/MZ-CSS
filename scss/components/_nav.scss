@@ -1,9 +1,15 @@
 // scss/components/_nav.scss
-.nav {
-    @include flex-center;
-    background-color: $ruby;
-    padding: $base-spacing;
-    
-    &--list { display: flex; gap: $base-spacing * 2; }
-    &--item a { color: $white; text-decoration: none; padding: $base-spacing / 2; }
-  }
+.navbar {
+  @include flex-center;
+  background-color: map-get(map-get($colors, ruby), base);
+  padding: $base-spacing * 2;
+  
+  &--brand { color: $white; font-size: 1.5rem; }
+  &--nav { display: flex; gap: $base-spacing * 2; }
+  &--link { color: $white; padding: $base-spacing; text-decoration: none; }
+  &--collapse { display: none; &.active { display: flex; } }
+  @include breakpoint(md) { &--collapse { display: flex; } }
+  
+  &--sticky { position: sticky; top: 0; z-index: 1000; }
+}
+.offcanvas { position: fixed; top: 0; width: 300px; height: 100%; background: $white; transform: translateX(-100%); &.active { transform: translateX(0); } }
